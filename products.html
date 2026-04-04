@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurum Leaf | Product Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="products">
+  <header class="site-header">
+    <div class="container header-shell">
+      <a class="brand" href="index.html" aria-label="Aurum Leaf">
+        <span class="brand-mark">AL</span>
+        <span class="brand-copy">
+          <span class="brand-name">Aurum Leaf</span>
+          <span class="brand-tagline" data-i18n="nav.brandTagline">Fine Tobacco Atelier</span>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="site-navigation-panel"
+        aria-label="Open menu"
+        data-i18n-aria-label="nav.menuLabel"
+      >
+        <span class="sr-only" data-i18n="nav.menuLabel">Open menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <div class="nav-panel" id="site-navigation-panel" data-nav-panel>
+        <nav class="site-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+          <a class="nav-link is-active" href="products.html" aria-current="page" data-i18n="nav.products">Products</a>
+          <a class="nav-link" href="about.html" data-i18n="nav.about">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button class="lang-option" type="button" data-lang-option="en">EN</button>
+            <button class="lang-option" type="button" data-lang-option="ar">AR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="nav-backdrop" type="button" data-nav-backdrop tabindex="-1" aria-hidden="true"></button>
+  </header>
+
+  <main>
+    <section class="page-hero section section--tight">
+      <div class="container">
+        <div class="page-hero__shell reveal">
+          <div class="page-hero__copy">
+            <span class="eyebrow" data-i18n="products.hero.eyebrow">Refined Inventory</span>
+            <h1 data-i18n="products.hero.title">A clean, bilingual product page built to be easy for you to expand later.</h1>
+            <p class="lead lead--compact" data-i18n="products.hero.text">Search, type filtering, and weight filtering are already wired in with vanilla JavaScript. Each card below is one sample product per type so you can duplicate the structure manually.</p>
+          </div>
+          <div class="page-ribbons">
+            <span class="ribbon-chip" data-i18n="products.ribbon1">Search enabled</span>
+            <span class="ribbon-chip" data-i18n="products.ribbon2">Bilingual data</span>
+            <span class="ribbon-chip" data-i18n="products.ribbon3">Easy to duplicate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact">
+      <div class="container">
+        <div class="filter-shell reveal">
+          <div class="filter-grid">
+            <div class="filter-control filter-control--search">
+              <label for="product-search" data-i18n="products.filters.searchLabel">Search products</label>
+              <input id="product-search" type="search" data-i18n-placeholder="products.filters.searchPlaceholder" placeholder="Search by title or description">
+            </div>
+
+            <div class="filter-control">
+              <label for="type-filter" data-i18n="products.filters.typeLabel">Filter by type</label>
+              <select id="type-filter"></select>
+            </div>
+
+            <div class="filter-control">
+              <label for="weight-filter" data-i18n="products.filters.weightLabel">Filter by weight</label>
+              <select id="weight-filter"></select>
+            </div>
+          </div>
+
+          <div class="results-meta">
+            <strong class="results-count" id="results-count"></strong>
+            <p data-i18n="products.filters.helper">The cards are intentionally simple and elegant so you can copy one block and add more later.</p>
+          </div>
+        </div>
+
+        <div class="product-grid" id="products-grid">
+          <!-- Product cards are rendered from the productsData array inside script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html" aria-label="Aurum Leaf">
+          <span class="brand-mark">AL</span>
+          <span class="brand-copy">
+            <span class="brand-name">Aurum Leaf</span>
+            <span class="brand-tagline" data-i18n="nav.brandTagline">Fine Tobacco Atelier</span>
+          </span>
+        </a>
+        <p class="footer-text" data-i18n="footer.description">A bilingual luxury storefront for refined tobacco, natural coal, and premium smoking accessories.</p>
+      </div>
+
+      <div>
+        <h2 class="footer-title" data-i18n="footer.linksTitle">Quick Links</h2>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="products.html" data-i18n="nav.products">Products</a>
+          <a href="about.html" data-i18n="nav.about">About Us</a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="footer-title" data-i18n="footer.promiseTitle">Premium Promise</h2>
+        <p class="footer-text" data-i18n="footer.promiseText">Light backgrounds, black and gold accents, rich imagery, and bilingual polish combine to create a modern luxury identity.</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="footer-copy" data-footer-copy></p>
+    </div>
+  </footer>
+</body>
+</html>
