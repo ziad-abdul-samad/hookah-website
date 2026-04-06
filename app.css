@@ -20,6 +20,7 @@
   --container: min(1180px, calc(100% - 2rem));
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;
+  --font-ar: "Tajawal", sans-serif;
   --transition: 240ms ease;
 }
 
@@ -43,6 +44,25 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.7;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] select {
+  font-family: var(--font-ar);
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] .brand-name,
+html[lang="ar"] .eyebrow,
+html[lang="ar"] .footer-title {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
 }
 
 a {
@@ -111,14 +131,15 @@ p {
 .brand-mark {
   display: grid;
   place-items: center;
-  inline-size: 2.85rem;
-  block-size: 2.85rem;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #231d12, #6b5430 65%, #d4ba85);
-  color: #fff9ef;
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
+  flex: 0 0 auto;
+  inline-size: auto;
+  block-size: auto;
+}
+
+.brand-mark img {
+  inline-size: auto;
+  block-size: 3rem;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -133,6 +154,55 @@ p {
 .brand-tagline {
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.28rem;
+  direction: ltr;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 16px 30px rgba(35, 29, 18, 0.06);
+}
+
+.lang-option {
+  padding: 0.55rem 0.8rem;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.lang-option:hover,
+.lang-option:focus-visible {
+  color: var(--text);
+}
+
+.lang-option.is-active {
+  background: linear-gradient(135deg, rgba(198, 168, 106, 0.18), rgba(198, 168, 106, 0.34));
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+html[lang="ar"] .lang-option {
+  font-family: var(--font-ar);
+}
+
+.admin-lang-switcher {
+  flex-shrink: 0;
+}
+
+.login-langbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 
 .nav-panel {
@@ -789,6 +859,31 @@ body.nav-open .nav-toggle span:nth-child(3) {
   color: var(--gold-deep);
 }
 
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .nav-shell,
+html[dir="rtl"] .nav-panel,
+html[dir="rtl"] .admin-userbar,
+html[dir="rtl"] .site-nav,
+html[dir="rtl"] .toolbar-actions,
+html[dir="rtl"] .filters,
+html[dir="rtl"] .admin-toolbar,
+html[dir="rtl"] .detail-meta,
+html[dir="rtl"] .actions-inline,
+html[dir="rtl"] .footer-shell {
+  direction: rtl;
+}
+
+html[dir="rtl"] .data-table th,
+html[dir="rtl"] .data-table td,
+html[dir="rtl"] .field input,
+html[dir="rtl"] .field textarea,
+html[dir="rtl"] .field select {
+  text-align: right;
+}
+
 @media (max-width: 1024px) {
   .hero-grid,
   .detail-grid,
@@ -856,6 +951,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
   body.nav-open .nav-overlay {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .admin-userbar {
+    justify-content: center;
   }
 }
 

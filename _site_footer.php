@@ -5,7 +5,7 @@ declare(strict_types=1);
         <div class="container footer-grid">
             <div>
                 <a class="brand brand--footer" href="index.php" aria-label="<?= e(app_name()) ?>">
-                    <span class="brand-mark">AL</span>
+                    <span class="brand-mark"><img src="images/logo2.png" alt="<?= e(app_name()) ?> logo"></span>
                     <span class="brand-copy">
                         <span class="brand-name"><?= e(app_name()) ?></span>
                         <span class="brand-tagline" data-i18n="nav.brandTagline">Fine Tobacco Atelier</span>
@@ -20,7 +20,6 @@ declare(strict_types=1);
                     <a href="index.php" data-i18n="nav.home">Home</a>
                     <a href="products.php" data-i18n="nav.products">Products</a>
                     <a href="about.php" data-i18n="nav.about">About Us</a>
-                    <a href="<?= e(is_admin_logged_in() ? 'dashboard.php' : 'dashboard-login.php') ?>" data-lang-en="Dashboard" data-lang-ar="لوحة التحكم">Dashboard</a>
                 </div>
             </div>
 
@@ -30,9 +29,7 @@ declare(strict_types=1);
             </div>
         </div>
 
-        <div class="container footer-bottom">
-            <p class="footer-copy" data-footer-copy></p>
-        </div>
+        
     </footer>
 </body>
 </html>

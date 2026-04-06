@@ -15,7 +15,7 @@ require __DIR__ . '/_site_header.php';
         <div class="container">
             <div class="page-hero__shell reveal">
                 <div class="page-hero__copy">
-                    <span class="eyebrow" data-i18n="about.hero.eyebrow">About Aurum Leaf</span>
+                    <span class="eyebrow" data-i18n="about.hero.eyebrow">About Mood</span>
                     <h1 data-i18n="about.hero.title">A polished brand story presented with elegant structure and visual confidence.</h1>
                     <p class="lead lead--compact" data-i18n="about.hero.text">This page is designed to explain your company clearly, showcase your standards, and support both English and Arabic audiences with a premium bilingual layout.</p>
                 </div>
@@ -93,38 +93,45 @@ require __DIR__ . '/_site_header.php';
     </section>
 
     <section class="section section-contrast">
-        <div class="container about-story">
-            <div class="about-copy reveal">
-                <span class="eyebrow" data-i18n="about.story.eyebrow">Brand Character</span>
-                <h2 data-i18n="about.story.title">Structured storytelling that feels premium in both languages.</h2>
-                <p data-i18n="about.story.text">The About page is arranged to feel calm, valuable, and trustworthy. It balances visual sophistication with clear information so the brand feels established from the first screen.</p>
-
-                <div class="story-points">
-                    <div class="story-point">
-                        <span class="story-point__marker"></span>
-                        <p data-i18n="about.story.point1">Use this section to describe sourcing philosophy, product discipline, or market vision.</p>
-                    </div>
-                    <div class="story-point">
-                        <span class="story-point__marker"></span>
-                        <p data-i18n="about.story.point2">Swap in real company details later without changing the page structure or styling system.</p>
-                    </div>
-                    <div class="story-point">
-                        <span class="story-point__marker"></span>
-                        <p data-i18n="about.story.point3">RTL and LTR support are already handled, so both language versions stay elegant and readable.</p>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="eyebrow" data-lang-en="Contact Details" data-lang-ar="بيانات التواصل">Contact Details</span>
+                <h2 data-lang-en="Reach Mood through our customer service channels." data-lang-ar="تواصل مع مود عبر قنوات خدمة العملاء.">Reach Mood through our customer service channels.</h2>
+                <p data-lang-en="Clear contact information presented in the same polished visual style as the rest of the brand experience." data-lang-ar="معلومات تواصل واضحة ومقدمة بنفس الأسلوب البصري الأنيق المعتمد في تجربة العلامة.">Clear contact information presented in the same polished visual style as the rest of the brand experience.</p>
             </div>
 
-            <div class="about-visual reveal">
-                <figure class="about-figure">
-                    <img
-                        src="https://images.pexels.com/photos/28865193/pexels-photo-28865193.jpeg?auto=compress&cs=tinysrgb&w=1400"
-                        alt="Premium lounge environment"
-                        data-i18n-alt="about.images.storyAlt"
-                        loading="lazy"
-                    >
-                </figure>
-                <div class="quote-card" data-i18n="about.story.quote">Refined presentation builds confidence before the first product is even touched.</div>
+            <div class="info-grid info-grid--contact">
+                <article class="lux-card info-card reveal">
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M7 5H10L11.5 8.5L9.5 10.2C10.4 12 12 13.6 13.8 14.5L15.5 12.5L19 14V17C19 17.6 18.6 18 18 18C11.9 18 7 13.1 7 7C7 6.4 7.4 6 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <h3 data-lang-en="Customer Service" data-lang-ar="خدمة العملاء">Customer Service</h3>
+                    <p>0940001900</p>
+                </article>
+
+                <article class="lux-card info-card reveal">
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 7.5L12 13L20 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="4" y="6" width="16" height="12" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                    <h3 data-lang-en="Email" data-lang-ar="البريد الإلكتروني">Email</h3>
+                    <p>İnfo@moodtobacco.com.sy</p>
+                </article>
+
+                <article class="lux-card info-card reveal">
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 20C15.5 16.8 18 13.9 18 10.8C18 7.6 15.3 5 12 5C8.7 5 6 7.6 6 10.8C6 13.9 8.5 16.8 12 20Z" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="12" cy="10.5" r="2.2" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                    <h3 data-lang-en="Address" data-lang-ar="العنوان">Address</h3>
+                    <p data-lang-en="Homs, industrial area (حمص المنطقة الصناعية)" data-lang-ar="حمص، المنطقة الصناعية">Homs, industrial area (حمص المنطقة الصناعية)</p>
+                </article>
             </div>
         </div>
     </section>

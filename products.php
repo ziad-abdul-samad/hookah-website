@@ -19,22 +19,7 @@ require __DIR__ . '/_site_header.php';
 ?>
 
 <main>
-    <section class="page-hero section section--tight">
-        <div class="container">
-            <div class="page-hero__shell reveal">
-                <div class="page-hero__copy">
-                    <span class="eyebrow" data-lang-en="Refined Inventory" data-lang-ar="مخزون راقٍ">Refined Inventory</span>
-                    <h1 data-lang-en="Search and browse the live MySQL product catalog inside the original luxury storefront." data-lang-ar="ابحث وتصفح كتالوج المنتجات المباشر من MySQL داخل الواجهة الفاخرة الأصلية.">Search and browse the live MySQL product catalog inside the original luxury storefront.</h1>
-                    <p class="lead lead--compact" data-lang-en="This page keeps the premium visual identity while using your dashboard data for sections, prices, descriptions, and product galleries." data-lang-ar="تحافظ هذه الصفحة على الهوية البصرية الفاخرة مع استخدام بيانات لوحة التحكم للأقسام والأسعار والوصف ومعارض الصور.">This page keeps the premium visual identity while using your dashboard data for sections, prices, descriptions, and product galleries.</p>
-                </div>
-                <div class="page-ribbons">
-                    <span class="ribbon-chip" data-lang-en="Search enabled" data-lang-ar="بحث مفعل">Search enabled</span>
-                    <span class="ribbon-chip" data-lang-en="Dashboard connected" data-lang-ar="متصل بلوحة التحكم">Dashboard connected</span>
-                    <span class="ribbon-chip" data-lang-en="Live catalog" data-lang-ar="كتالوج مباشر">Live catalog</span>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="section section--compact">
         <div class="container">
@@ -79,7 +64,6 @@ require __DIR__ . '/_site_header.php';
                         <?= e((string) count($products)) ?>
                         <span data-lang-en="Products" data-lang-ar="منتجات">Products</span>
                     </strong>
-                    <p data-lang-en="The cards below are connected to the dashboard, so editing products in PHP/MySQL updates this page automatically." data-lang-ar="البطاقات بالأسفل متصلة بلوحة التحكم، لذلك تعديل المنتجات في PHP وMySQL يحدّث هذه الصفحة تلقائيًا.">The cards below are connected to the dashboard, so editing products in PHP/MySQL updates this page automatically.</p>
                 </div>
             </form>
 

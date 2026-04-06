@@ -67,9 +67,9 @@ require __DIR__ . '/_admin_header.php';
 <main class="admin-shell">
     <div class="container admin-grid">
         <section class="page-heading">
-            <span class="eyebrow"><?= $editingSection ? 'Edit Section' : 'New Section' ?></span>
-            <h1><?= $editingSection ? 'Update section details.' : 'Create a new storefront section.' ?></h1>
-            <p>Sections help group products cleanly on the customer website and inside the dashboard filters.</p>
+            <span class="eyebrow" data-admin-lang-en="<?= $editingSection ? 'Edit Section' : 'New Section' ?>" data-admin-lang-ar="<?= $editingSection ? 'تعديل قسم' : 'قسم جديد' ?>"><?= $editingSection ? 'Edit Section' : 'New Section' ?></span>
+            <h1 data-admin-lang-en="<?= $editingSection ? 'Update section details.' : 'Create a new storefront section.' ?>" data-admin-lang-ar="<?= $editingSection ? 'تحديث بيانات القسم.' : 'إنشاء قسم جديد للمتجر.' ?>"><?= $editingSection ? 'Update section details.' : 'Create a new storefront section.' ?></h1>
+            <p data-admin-lang-en="Sections help group products cleanly on the customer website and inside the dashboard filters." data-admin-lang-ar="تساعد الأقسام على تنظيم المنتجات بشكل واضح داخل موقع العملاء ومرشحات لوحة التحكم.">Sections help group products cleanly on the customer website and inside the dashboard filters.</p>
         </section>
 
         <section class="form-card">
@@ -81,29 +81,29 @@ require __DIR__ . '/_admin_header.php';
                 <?= csrf_input() ?>
                 <div class="form-grid">
                     <div class="field">
-                        <label for="name">Section Name</label>
+                        <label for="name" data-admin-lang-en="Section Name" data-admin-lang-ar="اسم القسم">Section Name</label>
                         <input id="name" name="name" type="text" value="<?= e($form['name']) ?>" required>
                     </div>
 
                     <div class="field">
-                        <label for="slug">Slug</label>
-                        <input id="slug" name="slug" type="text" value="<?= e($form['slug']) ?>" placeholder="Leave blank to generate automatically">
+                        <label for="slug" data-admin-lang-en="Slug" data-admin-lang-ar="الرابط المختصر">Slug</label>
+                        <input id="slug" name="slug" type="text" value="<?= e($form['slug']) ?>" placeholder="Leave blank to generate automatically" data-admin-placeholder-en="Leave blank to generate automatically" data-admin-placeholder-ar="اتركه فارغًا ليتم إنشاؤه تلقائيًا">
                     </div>
 
                     <div class="field field--full">
-                        <label for="description">Description</label>
+                        <label for="description" data-admin-lang-en="Description" data-admin-lang-ar="الوصف">Description</label>
                         <textarea id="description" name="description"><?= e($form['description']) ?></textarea>
                     </div>
 
                     <div class="field">
-                        <label for="sort_order">Sort Order</label>
+                        <label for="sort_order" data-admin-lang-en="Sort Order" data-admin-lang-ar="ترتيب العرض">Sort Order</label>
                         <input id="sort_order" name="sort_order" type="number" value="<?= e($form['sort_order']) ?>">
                     </div>
                 </div>
 
                 <div class="toolbar-actions">
-                    <button class="button button-primary" type="submit"><?= $editingSection ? 'Save Changes' : 'Create Section' ?></button>
-                    <a class="button button-secondary" href="dashboard-sections.php">Cancel</a>
+                    <button class="button button-primary" type="submit" data-admin-lang-en="<?= $editingSection ? 'Save Changes' : 'Create Section' ?>" data-admin-lang-ar="<?= $editingSection ? 'حفظ التغييرات' : 'إنشاء القسم' ?>"><?= $editingSection ? 'Save Changes' : 'Create Section' ?></button>
+                    <a class="button button-secondary" href="dashboard-sections.php" data-admin-lang-en="Cancel" data-admin-lang-ar="إلغاء">Cancel</a>
                 </div>
             </form>
         </section>

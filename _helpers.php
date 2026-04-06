@@ -25,7 +25,7 @@ function config(?string $key = null, mixed $default = null): mixed
 
 function app_name(): string
 {
-    return (string) config('app.name', 'Aurum Leaf');
+    return (string) config('app.name', 'Mood');
 }
 
 function e(null|string|int|float $value): string
@@ -109,7 +109,11 @@ function slugify(string $value): string
 
 function format_currency(float $amount): string
 {
-    return '$' . number_format($amount, 2);
+    $formatted = floor($amount) === $amount
+        ? number_format($amount, 0)
+        : number_format($amount, 2);
+
+    return $formatted . ' ل.س';
 }
 
 function parse_attributes(string $value): array

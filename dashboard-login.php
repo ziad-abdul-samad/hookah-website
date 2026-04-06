@@ -30,22 +30,29 @@ if (is_post()) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($pageTitle) ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
     <main class="login-shell">
         <section class="login-card">
-            <span class="eyebrow">Admin Access</span>
-            <h1>Dashboard Login</h1>
-            <p class="lead">Use the credentials requested for this project to manage sections, products, prices, descriptions, and product galleries.</p>
+            <div class="login-langbar">
+                <div class="lang-switcher admin-lang-switcher" aria-label="Dashboard language switcher">
+                    <button class="lang-option" type="button" data-admin-lang-option="en">EN</button>
+                    <button class="lang-option" type="button" data-admin-lang-option="ar">AR</button>
+                </div>
+            </div>
+            <span class="eyebrow" data-admin-lang-en="Admin Access" data-admin-lang-ar="دخول الإدارة">Admin Access</span>
+            <h1 data-admin-lang-en="Dashboard Login" data-admin-lang-ar="تسجيل دخول لوحة التحكم">Dashboard Login</h1>
+            <p class="lead" data-admin-lang-en="Use the credentials requested for this project to manage sections, products, prices, descriptions, and product galleries." data-admin-lang-ar="استخدم بيانات الدخول الخاصة بالمشروع لإدارة الأقسام والمنتجات والأسعار والأوصاف ومعرض صور المنتجات.">Use the credentials requested for this project to manage sections, products, prices, descriptions, and product galleries.</p>
 
             <?php if ($flash): ?>
                 <div class="flash flash--<?= e($flash['type']) ?>" style="margin-top:1rem;"><?= e($flash['message']) ?></div>
@@ -58,18 +65,18 @@ if (is_post()) {
             <form method="post" style="margin-top:1.5rem;">
                 <?= csrf_input() ?>
                 <div class="field">
-                    <label for="username">Username</label>
+                    <label for="username" data-admin-lang-en="Username" data-admin-lang-ar="اسم المستخدم">Username</label>
                     <input id="username" name="username" type="text" value="<?= e($username) ?>" required>
                 </div>
 
                 <div class="field" style="margin-top:1rem;">
-                    <label for="password">Password</label>
+                    <label for="password" data-admin-lang-en="Password" data-admin-lang-ar="كلمة المرور">Password</label>
                     <input id="password" name="password" type="password" value="123" required>
                 </div>
 
                 <div class="toolbar-actions" style="margin-top:1.5rem;">
-                    <button class="button button-primary" type="submit">Login</button>
-                    <a class="button button-secondary" href="index.php">Back to Storefront</a>
+                    <button class="button button-primary" type="submit" data-admin-lang-en="Login" data-admin-lang-ar="تسجيل الدخول">Login</button>
+                    <a class="button button-secondary" href="index.php" data-admin-lang-en="Back to Storefront" data-admin-lang-ar="العودة إلى المتجر">Back to Storefront</a>
                 </div>
             </form>
         </section>

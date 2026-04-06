@@ -43,7 +43,7 @@ function applyRuntimeLanguage() {
   if (footerCopy) {
     const year = new Date().getFullYear();
     footerCopy.textContent = language === "ar"
-      ? `© ${year} Aurum Leaf. واجهة متجر فاخرة ثنائية اللغة مبنية بـ HTML وCSS وJavaScript وPHP وMySQL.`
-      : `© ${year} Aurum Leaf. Luxury bilingual storefront built with HTML, CSS, JavaScript, PHP, and MySQL.`;
+      ? `© ${year} Mood. واجهة متجر فاخرة ثنائية اللغة مبنية بـ HTML وCSS وJavaScript وPHP وMySQL.`
+      : `© ${year} Mood. Luxury bilingual storefront built with HTML, CSS, JavaScript, PHP, and MySQL.`;
   }
 }

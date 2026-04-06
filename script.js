@@ -1,12 +1,12 @@
-const STORAGE_KEY = "aurum-leaf-language";
+const STORAGE_KEY = "mood-language";
 
 const translations = {
   en: {
     meta: {
-      home: "Aurum Leaf | Luxury Tobacco & Accessories",
-      products: "Aurum Leaf | Product Collection",
-      about: "Aurum Leaf | About Us",
-      productDetail: "Aurum Leaf | Product Details"
+      home: "Mood | Luxury Tobacco & Accessories",
+      products: "Mood | Product Collection",
+      about: "Mood | About Us",
+      productDetail: "Mood | Product Details"
     },
     nav: {
       brandTagline: "Fine Tobacco Atelier",
@@ -139,7 +139,7 @@ const translations = {
     },
     about: {
       hero: {
-        eyebrow: "About Aurum Leaf",
+        eyebrow: "About Mood",
         title: "A polished brand story presented with elegant structure and visual confidence.",
         text: "This page is designed to explain your company clearly, showcase your standards, and support both English and Arabic audiences with a premium bilingual layout."
       },
@@ -202,15 +202,15 @@ const translations = {
       linksTitle: "Quick Links",
       promiseTitle: "Premium Promise",
       promiseText: "Light backgrounds, black and gold accents, rich imagery, and bilingual polish combine to create a modern luxury identity.",
-      copy: (year) => `© ${year} Aurum Leaf. Static bilingual website built with HTML, CSS, and vanilla JavaScript.`
+      copy: (year) => `© ${year} Mood. Static bilingual website built with HTML, CSS, and vanilla JavaScript.`
     }
   },
   ar: {
     meta: {
-      home: "Aurum Leaf | تبغ فاخر وإكسسوارات تدخين",
-      products: "Aurum Leaf | مجموعة المنتجات",
-      about: "Aurum Leaf | من نحن",
-      productDetail: "Aurum Leaf | تفاصيل المنتج"
+      home: "Mood | تبغ فاخر وإكسسوارات تدخين",
+      products: "Mood | مجموعة المنتجات",
+      about: "Mood | من نحن",
+      productDetail: "Mood | تفاصيل المنتج"
     },
     nav: {
       brandTagline: "دار التبغ الفاخر",
@@ -343,7 +343,7 @@ const translations = {
     },
     about: {
       hero: {
-        eyebrow: "عن Aurum Leaf",
+        eyebrow: "عن Mood",
         title: "قصة علامة تجارية مصقولة بتنسيق أنيق وحضور بصري واثق.",
         text: "تم تصميم هذه الصفحة لتشرح الشركة بوضوح، وتعرض معاييرها، وتخاطب الجمهور العربي والإنجليزي بتجربة ثنائية اللغة راقية."
       },
@@ -406,7 +406,7 @@ const translations = {
       linksTitle: "روابط سريعة",
       promiseTitle: "الوعد الفاخر",
       promiseText: "خلفيات فاتحة ولمسات سوداء وذهبية وصور غنية وصقل ثنائي اللغة لتشكيل هوية حديثة وفاخرة.",
-      copy: (year) => `© ${year} Aurum Leaf. موقع ثابت ثنائي اللغة مبني باستخدام HTML وCSS وJavaScript فقط.`
+      copy: (year) => `© ${year} Mood. موقع ثابت ثنائي اللغة مبني باستخدام HTML وCSS وJavaScript فقط.`
     }
   }
 };
@@ -965,7 +965,7 @@ function renderProductDetail() {
   const typeLabel = product.type[currentLanguage];
   const weightLabel = product.weight[currentLanguage];
 
-  document.title = `${title} | Aurum Leaf`;
+  document.title = `${title} | Mood`;
 
   root.innerHTML = `
     <div class="product-detail-shell">

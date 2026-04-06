@@ -134,9 +134,9 @@ require __DIR__ . '/_admin_header.php';
 <main class="admin-shell">
     <div class="container admin-grid">
         <section class="page-heading">
-            <span class="eyebrow"><?= $editingProduct ? 'Edit Product' : 'New Product' ?></span>
-            <h1><?= $editingProduct ? 'Refine product details and gallery.' : 'Create a new catalog product.' ?></h1>
-            <p>Each product stores its section, multiple images, attributes, description, and price for the customer detail page.</p>
+            <span class="eyebrow" data-admin-lang-en="<?= $editingProduct ? 'Edit Product' : 'New Product' ?>" data-admin-lang-ar="<?= $editingProduct ? 'تعديل منتج' : 'منتج جديد' ?>"><?= $editingProduct ? 'Edit Product' : 'New Product' ?></span>
+            <h1 data-admin-lang-en="<?= $editingProduct ? 'Refine product details and gallery.' : 'Create a new catalog product.' ?>" data-admin-lang-ar="<?= $editingProduct ? 'تحديث تفاصيل المنتج والمعرض.' : 'إنشاء منتج جديد في الكتالوج.' ?>"><?= $editingProduct ? 'Refine product details and gallery.' : 'Create a new catalog product.' ?></h1>
+            <p data-admin-lang-en="Each product stores its section, multiple images, attributes, description, and price for the customer detail page." data-admin-lang-ar="يحفظ كل منتج قسمه وصوره المتعددة وخصائصه ووصفه وسعره ليظهر بشكل كامل في صفحة تفاصيل المنتج.">Each product stores its section, multiple images, attributes, description, and price for the customer detail page.</p>
         </section>
 
         <section class="form-card">
@@ -149,7 +149,7 @@ require __DIR__ . '/_admin_header.php';
 
                 <div class="form-grid">
                     <div class="field">
-                        <label for="section_id">Section</label>
+                        <label for="section_id" data-admin-lang-en="Section" data-admin-lang-ar="القسم">Section</label>
                         <select id="section_id" name="section_id" required>
                             <?php foreach ($sections as $section): ?>
                                 <option value="<?= e((string) $section['id']) ?>" <?= (int) $form['section_id'] === (int) $section['id'] ? 'selected' : '' ?>>
@@ -160,35 +160,35 @@ require __DIR__ . '/_admin_header.php';
                     </div>
 
                     <div class="field">
-                        <label for="price">Price</label>
+                        <label for="price" data-admin-lang-en="Price" data-admin-lang-ar="السعر">Price</label>
                         <input id="price" name="price" type="number" min="0" step="0.01" value="<?= e($form['price']) ?>" required>
                     </div>
 
                     <div class="field">
-                        <label for="name">Product Name</label>
+                        <label for="name" data-admin-lang-en="Product Name" data-admin-lang-ar="اسم المنتج">Product Name</label>
                         <input id="name" name="name" type="text" value="<?= e($form['name']) ?>" required>
                     </div>
 
                     <div class="field">
-                        <label for="slug">Slug</label>
-                        <input id="slug" name="slug" type="text" value="<?= e($form['slug']) ?>" placeholder="Leave blank to generate automatically">
+                        <label for="slug" data-admin-lang-en="Slug" data-admin-lang-ar="الرابط المختصر">Slug</label>
+                        <input id="slug" name="slug" type="text" value="<?= e($form['slug']) ?>" placeholder="Leave blank to generate automatically" data-admin-placeholder-en="Leave blank to generate automatically" data-admin-placeholder-ar="اتركه فارغًا ليتم إنشاؤه تلقائيًا">
                     </div>
 
                     <div class="field field--full">
-                        <label for="attributes_text">Attributes</label>
-                        <textarea id="attributes_text" name="attributes_text" placeholder="Add one attribute per line"><?= e($form['attributes_text']) ?></textarea>
-                        <div class="helper-text">Example: 250g pack, Natural leaf blend, Luxury charcoal-ready mix.</div>
+                        <label for="attributes_text" data-admin-lang-en="Attributes" data-admin-lang-ar="الخصائص">Attributes</label>
+                        <textarea id="attributes_text" name="attributes_text" placeholder="Add one attribute per line" data-admin-placeholder-en="Add one attribute per line" data-admin-placeholder-ar="أضف كل خاصية في سطر مستقل"><?= e($form['attributes_text']) ?></textarea>
+                        <div class="helper-text" data-admin-lang-en="Example: 250g pack, Natural leaf blend, Luxury charcoal-ready mix." data-admin-lang-ar="مثال: عبوة 250 غرام، خلطة أوراق طبيعية، مزيج فاخر مناسب للفحم.">Example: 250g pack, Natural leaf blend, Luxury charcoal-ready mix.</div>
                     </div>
 
                     <div class="field field--full">
-                        <label for="description">Description</label>
+                        <label for="description" data-admin-lang-en="Description" data-admin-lang-ar="الوصف">Description</label>
                         <textarea id="description" name="description" required><?= e($form['description']) ?></textarea>
                     </div>
 
                     <div class="field field--full">
-                        <label for="images">Product Images</label>
+                        <label for="images" data-admin-lang-en="Product Images" data-admin-lang-ar="صور المنتج">Product Images</label>
                         <input id="images" name="images[]" type="file" accept="image/*" multiple data-image-input>
-                        <div class="helper-text">Upload JPG, PNG, WEBP, or GIF images. You can add multiple images and arrange existing ones below.</div>
+                        <div class="helper-text" data-admin-lang-en="Upload JPG, PNG, WEBP, or GIF images. You can add multiple images and arrange existing ones below." data-admin-lang-ar="ارفع صور JPG أو PNG أو WEBP أو GIF. يمكنك إضافة عدة صور وترتيب الصور الحالية في الأسفل.">Upload JPG, PNG, WEBP, or GIF images. You can add multiple images and arrange existing ones below.</div>
                     </div>
                 </div>
 
@@ -196,8 +196,8 @@ require __DIR__ . '/_admin_header.php';
 
                 <?php if ($existingImages !== []): ?>
                     <div class="section-block">
-                        <h2 style="font-size:2rem;">Existing Images</h2>
-                        <p class="table-note" style="margin-top:0.5rem;">Change sort order to control the carousel sequence, or mark images to remove them on save.</p>
+                        <h2 style="font-size:2rem;" data-admin-lang-en="Existing Images" data-admin-lang-ar="الصور الحالية">Existing Images</h2>
+                        <p class="table-note" style="margin-top:0.5rem;" data-admin-lang-en="Change sort order to control the carousel sequence, or mark images to remove them on save." data-admin-lang-ar="غيّر ترتيب الصور للتحكم في تسلسل المعرض، أو حدّد الصور التي تريد حذفها عند الحفظ.">Change sort order to control the carousel sequence, or mark images to remove them on save.</p>
 
                         <div class="existing-images">
                             <?php foreach ($existingImages as $image): ?>
@@ -207,7 +207,7 @@ require __DIR__ . '/_admin_header.php';
                                     <figcaption>
                                         <div class="image-tools">
                                             <div class="field">
-                                                <label for="image-sort-<?= e((string) $imageId) ?>">Sort Order</label>
+                                                <label for="image-sort-<?= e((string) $imageId) ?>" data-admin-lang-en="Sort Order" data-admin-lang-ar="ترتيب العرض">Sort Order</label>
                                                 <input
                                                     id="image-sort-<?= e((string) $imageId) ?>"
                                                     type="number"
@@ -224,7 +224,7 @@ require __DIR__ . '/_admin_header.php';
                                                     value="<?= e((string) $imageId) ?>"
                                                     <?= in_array($imageId, $removeImageIds, true) ? 'checked' : '' ?>
                                                 >
-                                                Remove this image
+                                                <span data-admin-lang-en="Remove this image" data-admin-lang-ar="حذف هذه الصورة">Remove this image</span>
                                             </label>
                                         </div>
                                     </figcaption>
@@ -235,10 +235,10 @@ require __DIR__ . '/_admin_header.php';
                 <?php endif; ?>
 
                 <div class="toolbar-actions">
-                    <button class="button button-primary" type="submit"><?= $editingProduct ? 'Save Changes' : 'Create Product' ?></button>
-                    <a class="button button-secondary" href="dashboard-products.php">Cancel</a>
+                    <button class="button button-primary" type="submit" data-admin-lang-en="<?= $editingProduct ? 'Save Changes' : 'Create Product' ?>" data-admin-lang-ar="<?= $editingProduct ? 'حفظ التغييرات' : 'إنشاء المنتج' ?>"><?= $editingProduct ? 'Save Changes' : 'Create Product' ?></button>
+                    <a class="button button-secondary" href="dashboard-products.php" data-admin-lang-en="Cancel" data-admin-lang-ar="إلغاء">Cancel</a>
                     <?php if ($editingProduct): ?>
-                        <a class="button button-secondary" href="product.php?slug=<?= e((string) $editingProduct['slug']) ?>" target="_blank" rel="noopener">View Storefront Page</a>
+                        <a class="button button-secondary" href="product.php?slug=<?= e((string) $editingProduct['slug']) ?>" target="_blank" rel="noopener" data-admin-lang-en="View Storefront Page" data-admin-lang-ar="عرض صفحة المنتج">View Storefront Page</a>
                     <?php endif; ?>
                 </div>
             </form>

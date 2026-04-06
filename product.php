@@ -27,7 +27,6 @@ require __DIR__ . '/_site_header.php';
                 <div class="page-hero__copy">
                     <span class="eyebrow" data-lang-en="Product Details" data-lang-ar="تفاصيل المنتج">Product Details</span>
                     <h1 data-lang-en="A premium product page with gallery images, clear pricing, and elegant detail presentation." data-lang-ar="صفحة منتج فاخرة مع معرض صور وتسعير واضح وعرض أنيق للتفاصيل.">A premium product page with gallery images, clear pricing, and elegant detail presentation.</h1>
-                    <p class="lead lead--compact" data-lang-en="This product is loaded from the PHP/MySQL dashboard while preserving the refined storefront style and responsive gallery behavior." data-lang-ar="يتم تحميل هذا المنتج من لوحة تحكم PHP وMySQL مع الحفاظ على أسلوب الواجهة الفاخر وسلوك المعرض المتجاوب.">This product is loaded from the PHP/MySQL dashboard while preserving the refined storefront style and responsive gallery behavior.</p>
                 </div>
             </div>
         </div>
@@ -40,7 +39,6 @@ require __DIR__ . '/_site_header.php';
                     <figure class="detail-stage">
                         <img src="<?= e((string) $coverImage) ?>" alt="<?= e((string) $product['name']) ?>" data-gallery-main loading="eager">
                         <div class="detail-gallery__actions">
-                            <span class="detail-counter"><?= e((string) max(count($images), 1)) ?> <span data-lang-en="Images" data-lang-ar="صور">Images</span></span>
                             <?php if (count($images) > 1): ?>
                                 <div class="detail-controls">
                                     <button class="detail-control" type="button" data-gallery-prev aria-label="Previous image" data-i18n-aria-label="detail.previousLabel">&#8249;</button>
@@ -85,10 +83,6 @@ require __DIR__ . '/_site_header.php';
                         <span>
                             <span data-lang-en="Section" data-lang-ar="القسم">Section</span>:
                             <?= e((string) $product['section_name']) ?>
-                        </span>
-                        <span>
-                            <span data-lang-en="Images" data-lang-ar="الصور">Images</span>:
-                            <?= e((string) max(count($images), 1)) ?>
                         </span>
                     </div>
 

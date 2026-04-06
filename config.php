@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 return [
     'app' => [
-        'name' => 'Aurum Leaf',
+        'name' => 'Mood',
         'base_path' => __DIR__,
     ],
     'db' => [

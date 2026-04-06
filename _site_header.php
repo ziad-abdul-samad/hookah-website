@@ -5,7 +5,6 @@ $pageTitle = $pageTitle ?? app_name();
 $currentPage = $currentPage ?? '';
 $bodyPage = $bodyPage ?? '';
 $flash = pull_flash();
-$dashboardLink = is_admin_logged_in() ? 'dashboard.php' : 'dashboard-login.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -25,7 +24,7 @@ $dashboardLink = is_admin_logged_in() ? 'dashboard.php' : 'dashboard-login.php';
     <header class="site-header">
         <div class="container header-shell">
             <a class="brand" href="index.php" aria-label="<?= e(app_name()) ?>">
-                <span class="brand-mark">AL</span>
+                <span class="brand-mark"><img src="images/logo2.png" alt="<?= e(app_name()) ?> logo"></span>
                 <span class="brand-copy">
                     <span class="brand-name"><?= e(app_name()) ?></span>
                     <span class="brand-tagline" data-i18n="nav.brandTagline">Fine Tobacco Atelier</span>
@@ -57,7 +56,6 @@ $dashboardLink = is_admin_logged_in() ? 'dashboard.php' : 'dashboard-login.php';
                 </nav>
 
                 <div class="header-actions">
-                    <a class="button button-secondary button--compact" href="<?= e($dashboardLink) ?>" data-lang-en="Dashboard" data-lang-ar="لوحة التحكم">Dashboard</a>
                     <div class="lang-switcher" aria-label="Language switcher">
                         <button class="lang-option" type="button" data-lang-option="en">EN</button>
                         <button class="lang-option" type="button" data-lang-option="ar">AR</button>
